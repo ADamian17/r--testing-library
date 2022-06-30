@@ -2,8 +2,8 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
-import Modal from '..';
+import Form from '..';
 
-describe('Modal Component', () => {
-  test('Modal should not be in the document', () => {});
+describe('Form Component', () => {
+  test('Form should be in the document', () => {});
 });
