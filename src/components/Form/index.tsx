@@ -22,12 +22,13 @@ const Form: React.FC = (props) => {
       <form onSubmit={handleSubmit}>
         <div>
           <input
+            data-testid="form-input"
             onBlur={handleBlur}
             onChange={handleChange}
             placeholder="Username"
             type="text"
           />
-          {error && <p>field is required</p>}
+          {error && <p data-testid="form-input-error">field is required</p>}
         </div>
         <input type="submit" value="Confirm identity" />
       </form>
