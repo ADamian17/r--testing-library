@@ -2,6 +2,7 @@ import React from 'react';
 
 import { useRecoilState } from 'recoil';
 import { modalAtom } from './atom';
+import Button from './Button';
 
 type ModalProps = {
   modalContent: string;
@@ -12,11 +13,20 @@ const Modal: React.FC<ModalProps> = ({ modalContent }) => {
 
   return (
     <div>
-      <button onClick={() => setShowModal(!showModal)}>open modal</button>
+      <Button
+        data-testid="modal-trigger"
+        btnText={'open modal'}
+        setFunc={setShowModal}
+      />
 
       {showModal ? (
-        <div>
-          <button onClick={() => setShowModal(!showModal)}>close Modal</button>
+        <div data-testid="modal">
+          <button
+            data-testid="modal-close-btn"
+            onClick={() => setShowModal(!showModal)}
+          >
+            close Modal
+          </button>
 
           {modalContent}
         </div>

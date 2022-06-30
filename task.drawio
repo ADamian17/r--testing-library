@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="IBVapDYYiQgunKs7HWcw" name="Page-1">
-        <mxGraphModel dx="871" dy="890" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="1133" dy="890" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -10,7 +10,7 @@
                 <mxCell id="5" value="Cool feature" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.topButton;rSize=5;perimeter=none;whiteSpace=wrap;fillColor=#F7F7F7;strokeColor=#6C767D;fontColor=#6C767D;resizeWidth=1;fontSize=18;align=left;spacing=20;" parent="4" vertex="1">
                     <mxGeometry width="379.99999999999994" height="50" relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="24" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.smiley" vertex="1" parent="4">
+                <mxCell id="24" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.smiley" parent="4" vertex="1">
                     <mxGeometry x="305" y="65" width="45" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="6" value="&lt;b&gt;&lt;font style=&quot;font-size: 20px&quot;&gt;Special title treatment&lt;/font&gt;&lt;/b&gt;&lt;br style=&quot;font-size: 14px&quot;&gt;&lt;br style=&quot;font-size: 14px&quot;&gt;With supporting text below as a natural lead-in to additional content." style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#DFDFDF;html=1;whiteSpace=wrap;fillColor=#FFFFFF;fontColor=#000000;align=left;verticalAlign=top;spacing=20;fontSize=14;" parent="1" vertex="1">
@@ -27,14 +27,20 @@
                 <mxCell id="22" value="" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.checkbox2;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;gradientColor=#DEDEDE;fillColor=#EDBAAB;checked=0;spacing=5;checkedFill=#0085FC;checkedStroke=#ffffff;sketch=0;" parent="23" vertex="1">
                     <mxGeometry width="380" height="120" as="geometry"/>
                 </mxCell>
-                <mxCell id="19" value="thank you for signing up" style="strokeColor=none;fillColor=none;fontColor=#777777;whiteSpace=wrap;align=left;verticalAlign=middle;fontStyle=0;fontSize=14;" parent="23" vertex="1">
-                    <mxGeometry x="20" y="80" width="180" height="40" as="geometry"/>
-                </mxCell>
                 <mxCell id="21" value="Confirm identity" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=none;fillColor=#0085FC;fontColor=#ffffff;whiteSpace=wrap;align=center;verticalAlign=middle;fontStyle=0;fontSize=14;spacing=14;" parent="23" vertex="1">
                     <mxGeometry x="240" y="40" width="125" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="20" value="Password" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#999999;fillColor=#ffffff;fontColor=#777777;whiteSpace=wrap;align=left;verticalAlign=middle;fontStyle=0;fontSize=14;spacing=15;" parent="23" vertex="1">
                     <mxGeometry x="20" y="40" width="200" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="" style="group" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="120" y="670" width="380" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.checkbox2;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;gradientColor=#DEDEDE;fillColor=#EDBAAB;checked=0;spacing=5;checkedFill=#0085FC;checkedStroke=#ffffff;sketch=0;" vertex="1" parent="30">
+                    <mxGeometry width="380" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="thank you for signing up" style="strokeColor=none;fillColor=none;fontColor=#777777;whiteSpace=wrap;align=left;verticalAlign=middle;fontStyle=0;fontSize=14;" parent="30" vertex="1">
+                    <mxGeometry x="100" y="40" width="160" height="40" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
