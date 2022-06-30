@@ -11,7 +11,7 @@ const Modal: React.FC<ModalProps> = ({ modalContent }) => {
   const [showModal, setShowModal] = useRecoilState(modalAtom);
 
   return (
-    <div>
+    <div data-testid="modal">
       <button onClick={() => setShowModal(!showModal)}>Open Modal</button>
 
       {showModal ? (

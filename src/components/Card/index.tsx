@@ -16,12 +16,19 @@ const Card: React.FC<CardProps> = ({
   cardTitle,
   cardImage,
 }) => (
-  <div>
-    <h1>{cardHeader}</h1>
-    <h2>{cardTitle}</h2>
+  <div data-testid="card">
+    <h1 data-testid="card-header">{cardHeader}</h1>
+    <h2
+      data-testid="card-title"
+      dangerouslySetInnerHTML={{ __html: cardTitle }}
+    />
     <p>{cardCopy}</p>
 
-    <img src={cardImage.mediaItemUrl} alt={cardImage.altText} />
+    <img
+      data-testid="card-image"
+      src={cardImage.mediaItemUrl}
+      alt={cardImage.altText}
+    />
   </div>
 );
 
