@@ -1,12 +1,22 @@
-import { getDefaultNormalizer, render, screen } from '@testing-library/react';
-import Card from '..';
+import { render, screen } from '@testing-library/react';
+
 import { cardMockData } from './mockData';
+import Card from '..';
+
+interface SetupProps<T = {}> {
+  (props: T): void;
+}
+
+const setup: SetupProps = (props) => {
+  const internalProps = { ...cardMockData, ...props };
+  render(<Card {...internalProps} />);
+};
 
 describe('Card Component', () => {
   beforeEach(() => {
-    // eslint-disable-next-line testing-library/no-render-in-setup
-    render(<Card {...cardMockData} />);
+    setup(cardMockData);
   });
+
   test('should be in the document', () => {
     // getBy returns an error if it does not find the element;
     expect(screen.getByTestId('card')).toBeInTheDocument();
@@ -17,31 +27,53 @@ describe('Card Component', () => {
     );
   });
   test('card title should match props', () => {
-    screen.getByTestId('card-title'); // getBy returns an error if it does not find the element
+    screen.getByTestId('card-title');
   });
   test('card copy should match props', () => {
-    screen.getByTestId('card-copy'); // getBy returns an error if it does not find the element
+    screen.getByTestId('card-copy');
+  });
+});
+
+describe('Card Component Image', () => {
+  // https://jestjs.io/docs/expect#expectstringmatchingstring--regexp
+  // https://github.com/testing-library/jest-dom#tohaveattribute
+  test('card image src should match props', () => {
+    setup(cardMockData);
+    expect(screen.getByTestId('card-image')).toHaveAttribute(
+      'src',
+      cardMockData.cardImage.mediaItemUrl
+    );
   });
 
-  describe('Card Image', () => {
-    let cardImageEl: HTMLElement;
+  test('card image alt should match props', () => {
+    setup(cardMockData);
+    expect(screen.getByTestId('card-image')).toHaveAttribute(
+      'alt',
+      cardMockData.cardImage.altText
+    );
+  });
 
-    beforeEach(() => {
-      cardImageEl = screen.getByTestId('card-image');
+  test('card image should not have src', () => {
+    setup({
+      cardImage: {
+        ...cardMockData.cardImage,
+        mediaItemUrl: null,
+      },
     });
 
-    test('card image src should not be empty', () => {
-      expect(cardImageEl).toHaveAttribute(
-        'src',
-        cardMockData.cardImage.mediaItemUrl
-      );
+    // screen.debug(screen.getByTestId('card-image'));
+    expect(screen.getByTestId('card-image')).not.toHaveAttribute('src');
+  });
+
+  test('card image should not have alt', () => {
+    setup({
+      cardImage: {
+        ...cardMockData.cardImage,
+        altText: null,
+      },
     });
 
-    test('card image alt should not be empty', () => {
-      expect(cardImageEl).toHaveAttribute(
-        'alt',
-        cardMockData.cardImage.altText
-      );
-    });
+    // screen.debug(screen.getByTestId('card-image'));
+    expect(screen.getByTestId('card-image')).not.toHaveAttribute('alt');
   });
 });
