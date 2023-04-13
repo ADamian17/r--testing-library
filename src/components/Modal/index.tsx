@@ -11,12 +11,22 @@ const Modal: React.FC<ModalProps> = ({ modalContent }) => {
   const [showModal, setShowModal] = useRecoilState(modalAtom);
 
   return (
-    <div data-testid="modal">
-      <button onClick={() => setShowModal(!showModal)}>Open Modal</button>
+    <div>
+      <button
+        data-testid="modal-trigger"
+        onClick={() => setShowModal(!showModal)}
+      >
+        Open Modal
+      </button>
 
       {showModal ? (
-        <div>
-          <button onClick={() => setShowModal(!showModal)}>close Modal</button>
+        <div data-testid="modal">
+          <button
+            data-testid="modal-close"
+            onClick={() => setShowModal(!showModal)}
+          >
+            close Modal
+          </button>
 
           {modalContent}
         </div>
